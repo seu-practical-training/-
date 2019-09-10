@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/openshow/openshow",
+    "pages/mainlogin/mainlogin",
+    "pages/firstpage/firstpage",
+    "pages/goods_details/goods_details",
+    "pages/userCenter/userCenter",
+    "pages/shoppingcart/shoppingcart",
+    "pages/order/order",
+    "pages/historicalorders/historicalorders",
+    "pages/address/address",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/collect/collect" 
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "推好物",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#b7b7b7",
+    "selectedColor": "#b7b7b7",
+    "borderStyle": "white",
+    "backgroundColor": "#f5f5f5",
+    "list": [
+      {
+        "selectedIconPath": "pages/images/shouye-fill.png",
+        "iconPath": "pages/images/shouye.png",
+        "pagePath": "pages/firstpage/firstpage",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/images/gouwucheman.png",
+        "iconPath": "pages/images/gouwuchekong.png",
+        "pagePath": "pages/shoppingcart/shoppingcart",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "pages/images/yonghu-fill.png",
+        "iconPath": "pages/images/yonghu.png",
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "我的"
+      }
+    ]
+  }
+}
