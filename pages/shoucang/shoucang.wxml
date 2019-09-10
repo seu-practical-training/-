@@ -1,0 +1,16 @@
+<view class="orders-box">
+  <view class="orders">我的收藏</view>
+  <!-- <view class="orders-list" wx:for="{{shoucang_list}}" wx:key="index"> -->
+  <view class="orders-detail" wx:for="{{shoucang_list}}" wx:for-item="cell" wx:for-index="cellindex">
+    <image src="{{cell.image}}"></image>
+    <view class="">{{cell.title}}</view>
+    <view class="">单价：{{cell.price}}</view>
+    <view class="orders-footer">
+      <button size="mini" class="left" bindtap="cancelshoucang" data-index="{{cell.id}}">取消</button>
+      <navigator url='../goods_details/goods_details?temp={{cell.id}}'>
+        <button size="mini" class="orders-btn">详情</button>
+      </navigator>
+    </view>
+  </view>
+  <!-- </view> -->
+</view>

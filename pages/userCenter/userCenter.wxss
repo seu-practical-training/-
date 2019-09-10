@@ -1,0 +1,147 @@
+/**index.wxss**/
+
+.top {
+  display: flex;
+  flex-direction: row;
+  background-color:white;
+  width: 100%;
+  height: 200rpx;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.userformat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userinfoAvatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  margin-bottom: 2rpx;
+  margin-top: 30rpx;
+  border-radius: 50%;
+}
+
+.userinfoNickname {
+  color:black;
+  margin-top: 50rpx;
+  margin-left: 10rpx;
+  margin-bottom: 15rpx;
+  font-size: 30rpx;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.shezhiFormat{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+  margin-left: 320rpx;
+  margin-top: 20rpx;
+}
+
+.userSelectRow {
+  display: flex;
+}
+
+.format {
+  width: 33.333333333333333333333333333333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20rpx;
+}
+
+.iconImage {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 30rpx;
+}
+
+.textFont {
+  color: gray;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+
+.personalList {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.iconfont {
+  font-size: 14px;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 90rpx;
+}
+.item-image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 20rpx;
+}
+.item-text {
+  color: gray;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.person-line {
+  width: 80%;
+  height: 2rpx;
+  background: lightgray;
+  margin-left: 90rpx;
+}
+
+.top-line{
+  width: 100%;
+  height: 1rpx;
+  background: rgba(211, 211, 211, 0.432);
+}
+.part-line{
+  width: 100%;
+  height: 15rpx;
+  background: rgba(211, 211, 211, 0.623);
+}
+
+.slide-image{
+  width: 100%;
+  height: 350rpx;
+}
+
+.order{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 70rpx;
+}
+
+.myorder{
+  font-size: 30rpx;
+  color: gray;
+  position: relative;
+  right: 20rpx;
+  width: 60%;
+  text-align: right;
+}
+
+.myorder-text {
+  font-size: 34rpx;
+  color: gray;
+  margin: 20rpx;
+  width: 40%;
+}

@@ -1,0 +1,15 @@
+<!--pages/toplist/toplist.wxml-->
+<view class="main">
+  <image class='bd' src="../images/bg.jpg" mode="aspectFill"></image>
+
+  <view class="cart-box">
+    <view class="cart-list" wx:for="{{fashion_list}}" wx:key="{{index}}">
+      <navigator url="../goods_details/goods_details?temp={{item.idtext}}">
+        <image class="cart-thumb" src="{{item.navimg}}"></image>
+      </navigator>
+      <text class="cart-pro-name">{{item.nametext}}</text>
+      <text class="cart-pro-price">￥{{item.pricetext}}</text>
+    </view>
+  </view>
+  
+</view>

@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="top">
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block class="userformat" wx:else>
+        <image class="userinfoAvatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfoNickname">用户名:{{userInfo.nickName}}</text>
+      </block>
+    </view>
+
+    <image class="shezhiFormat" src="../images/shezhi.png" bindtap="bindShezhi"></image>
+
+  </view>
+
+  <view class="top-line"></view>
+  <view class="order" catchtap="toOrder">
+    <text class="myorder-text">     </text>
+    <text class="myorder">我的订单</text>
+  </view>
+  <view class="part-line"></view>
+  <view class="userSelectRow">
+    <view class="format" catchtap="toOrdersUnpay">
+      <!-- <button class='btn'> -->
+        <image class="iconImage" src="../images/daifukuan1.png"></image>
+      <!-- </button> -->
+      <text class="textFont">待付款</text>
+    </view>
+    
+    <view class="format" bindtap='bill'>
+      <!-- <button class='btn'> -->
+        <image class="iconImage" src="../images/xiaofeizongjie1.png"></image>
+      <!-- </button> -->
+      <text class="textFont">消费总结</text>
+    </view>
+
+    <view class="format" bindtap="billayl">
+      <!-- <button class='btn'> -->
+        <image class="iconImage" src="../images/Analysis1.png"></image>
+      <!-- </button> -->
+      <text class="textFont">消费分析</text>
+    </view>
+
+    
+
+  </view>
+  <view class="part-line"></view>
+  <!-- 列表 -->
+  <view class="personalList">
+    <!-- <view class="list-item" bindtap="listFirst">
+        <image class="item-image" src="../images/youhuiquan.png"></image>
+        <text class="item-text">优惠券</text>
+    </view>
+    <view class="person-line"></view> -->
+
+    <view class="list-item" bindtap="star">
+        <image class="item-image" src="../images/star1.png"></image>
+        <text class="item-text">我的收藏</text>
+    </view>
+    <view class="person-line"></view>
+
+    <view class="list-item" bindtap="address">
+        <image class="item-image" src="../images/shouhuodizhi.png"></image>
+        <text class="item-text">收货地址</text>
+    </view>
+    <view class="person-line"></view>
+
+    <view class="list-item" bindtap="change">
+        <image class="item-image" src="../images/xiugai.png"></image>
+        <text class="item-text">修改用户信息</text>
+    </view>
+  </view>
+    
+  
+
+</view>

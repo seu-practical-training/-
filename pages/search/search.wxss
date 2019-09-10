@@ -1,0 +1,300 @@
+/* pages/search/search.wxss */
+.main{
+    padding: 0 20rpx;
+}
+.search-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 26rpx;
+}
+.search-input {
+    flex: 1;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 0 20rpx 0 54rpx;
+    background: #f8f8f8;
+    border-radius: 10rpx;
+    font-size: 32rpx;
+    border: 2rpx solid #ddd;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15rpx;
+    top: 44rpx;
+    width: 35rpx;
+    height: 35rpx;
+}
+.search-btn{
+    font-size: 32rpx;
+    padding: 0 20rpx;
+    line-height: 64rpx;
+}
+.title{
+    font-size: 32rpx;
+    margin: 30rpx 0;
+}
+.title text{
+    padding-right: 30rpx;
+    padding-bottom: 10rpx;
+    color: #AB956D;
+    border-bottom: 8rpx solid #AB956D;
+}
+.tags text{
+    display: inline-block;
+    font-size: 28rpx;
+    padding: 6rpx 20rpx;
+    border: 2rpx solid #ddd;
+    color: #aaa;
+    margin: 0 30rpx 20rpx 0;
+    border-radius: 40rpx;
+    word-break: break-all;
+}
+.keywords{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 90rpx;
+    background: #fff;
+    z-index: 9;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+.keywords-item{
+    line-height: 70rpx;
+    border-bottom: 1px solid #eee;
+    color: #787878;
+    font-size: 28rpx;
+}
+.result{
+    margin-top: 40rpx;
+}
+
+.result-box, .recommend-box{
+    padding:0 20rpx;
+}
+.result-list{
+    display: inline-block;
+    width: 325rpx;
+    height: 325rpx;
+    margin:0 20rpx 20rpx 0;
+    border-radius: 10px;
+    text-align: center;
+    background: #f5f6f5;
+}
+.result-list:nth-child(2n){
+    margin-right: 0;
+}
+.result-list image{
+    width: 175rpx;
+    height: 175rpx;
+    margin: 20rpx 0 10rpx;
+}
+.result-list .result-text{
+    font-size: 32rpx;
+}
+.null-tips{
+    padding: 200rpx 0;
+    text-align: center;
+    color: #787878;
+}
+
+classify.wxss
+page{ 
+background: #f5f5f5; 
+} 
+/*总体主盒子*/
+.container { 
+position: relative; 
+width: 100%; 
+height: 100%; 
+background-color: #fff; 
+color: #939393; 
+}
+/*左侧栏主盒子*/
+.nav_left{ 
+/*设置行内块级元素（没使用定位）*/
+display: inline-block; 
+width: 25%; 
+height: 100%; 
+/*主盒子设置背景色为灰色*/
+background: #f5f5f5; 
+text-align: center; 
+} 
+/*左侧栏list的item*/
+.nav_left .nav_left_items{ 
+/*每个高30px*/
+height: 40px; 
+/*垂直居中*/
+line-height: 40px; 
+/*再设上下padding增加高度，总高42px*/
+padding: 6px 0; 
+/*只设下边线*/
+border-bottom: 1px solid #dedede; 
+/*文字14px*/
+font-size: 14px; 
+} 
+/*左侧栏list的item被选中时*/
+.nav_left .nav_left_items.active{ 
+/*背景色变成白色*/
+background: #fff; 
+color: #AB956D; 
+} 
+/*右侧栏主盒子*/
+.nav_right{ 
+/*右侧盒子使用了绝对定位*/
+position: absolute; 
+top: 0; 
+right: 0; 
+flex: 1; 
+/*宽度75%，高度占满，并使用百分比布局*/
+width: 75%; 
+height: 1000px; 
+padding: 10px; 
+box-sizing: border-box; 
+background: #fff; 
+} 
+/*右侧栏list的item*/
+.nav_right .nav_right_items{ 
+/*浮动向左*/
+float: left; 
+/*每个item设置宽度是33.33%*/
+width: 33.33%; 
+height: 120px; 
+text-align: center; 
+} 
+.nav_right .nav_right_items image{ 
+/*被图片设置宽高*/
+width: 60px; 
+height: 60px; 
+margin-top: 15px; 
+} 
+.nav_right .nav_right_items text{ 
+/*给text设成块级元素*/
+display: block; 
+margin-top: 15px; 
+font-size: 14px; 
+color: black;
+/*设置文字溢出部分为...*/
+overflow: hidden; 
+white-space: nowrap; 
+text-overflow: ellipsis; 
+} 
+.nodata_text
+{
+color: black;
+font-size: 14px; 
+text-align: center; 
+}
+
+
+
+
+
+
+/**分类栏**/
+
+.classify{
+
+  margin-top:25rpx;
+
+}
+
+.left-navbar{
+
+  position:absolute;
+
+  left:0;
+
+  width:25%;
+
+  height:90%;
+
+  background-color:#eee;
+
+  font-size:15px;
+
+}
+
+.left-navbar view{
+
+  height:80rpx;
+
+  line-height: 80rpx;
+
+  text-align:center;
+
+}
+
+.active{
+
+  background-color:#FFF;
+
+  color:red;
+
+  font-size:17px;
+
+}
+
+#right{
+
+  position:absolute;
+
+  right:0;
+
+  width:75%;
+
+  height:90%;
+
+}
+
+.img-banner{
+
+  height:150rpx;
+
+  width:100%;
+
+}
+
+.goods-list{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  margin-top:30rpx;
+
+}
+
+.goods-title{
+
+  width:100%;
+
+  font-size:15px;
+
+  font-weight:bold;
+
+  padding-left:10rpx;
+
+}
+
+.goods{
+
+  width:150rpx;
+
+  font-size:14px;
+
+  margin:15rpx;
+
+  text-align:center;
+
+}
+
+.img{
+
+  width:140rpx;
+
+  height:140rpx;
+
+}

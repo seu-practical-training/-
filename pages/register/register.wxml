@@ -1,0 +1,39 @@
+<view class="container">
+<!-- 注册页面 -->
+<!-- 作者：郑雅璐 -->
+
+  <!-- 顶部导航栏 -->
+  <view class="infoBar">
+    <text class="frist"><text class="second">1.输入手机号</text>> 2.人脸信息采集</text>
+  </view>
+
+  <!-- 填写用户姓名，手机号码等信息 -->
+  <view class="section">
+  <input placeholder-class='phcolor' placeholder="请输入用户姓名" type="text" maxlength="11" bindinput="inputName" auto-focus />
+  </view>
+  <view class="section">
+    <input placeholder-class='phcolor' placeholder="请输入手机号码" type="number" maxlength="11" bindinput="inputPhoneNum" auto-focus />
+    <view class="send" bindtap="sendMsg">
+    <text wx:if="{{send}}" >发送</text>
+    <text wx:if="{{alreadySend}}">{{second+"s"}}</text>
+    </view>
+  </view>
+
+  <!-- 输入密码 -->
+  <view class="section">
+    <input placeholder-class='phcolor' password='true' placeholder="输入密码" type="number" maxlength="32" minlength="8" bindinput="inputPassword" auto-focus="true"/>
+  </view>
+
+ <!-- 确定密码 -->
+  <view class="section">
+    <input placeholder-class='phcolor' password='true' placeholder="确认密码" type="number" bindinput="checkPassword" auto-focus="true"/>
+    <image wx:if="{{correct}}" class="correct"  mode='widthFix' src="  ../images/check-circle.png" bindtap="correct"></image >
+  </view>
+
+  <view class="remark">
+    <text>密码长度8-32位</text>
+  </view>
+
+  <button disabled="{{disabled}}" bindtap="navigate">确认提交</button>
+
+</view>

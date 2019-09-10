@@ -1,0 +1,44 @@
+<scroll-view class="scroll-view_H" scroll-x scroll-with-animation style="width: 100%;height:90vh" bindscroll="getSelectItem">
+  <block wx:for="{{proList}}" wx:key="unique" wx:for-index="id" wx:for-item="item">
+    <view class="scroll_item {{item.selected ? 'selected' : ''}}" data-index='{{item.index}}'>
+      <navigator url="../goods_details/goods_details?temp={{item.proID}}">
+        <view class='proImg'>
+          <image src="{{item.proUrl}}" class="slide-image" mode="widthFix" />
+        </view>
+
+        <view class='detailBox'>
+          <view class='proTitle'>{{item.proTitle}}</view>
+          <view class='proDec'>{{item.proTitle}}</view>
+          <view class='proPrice'>￥{{item.proprice}}</view>
+        </view>
+      </navigator>
+    </view>
+  </block>
+</scroll-view>
+
+ <button class='btn1' bindtap="likeit">
+ <image class='btnImg' src='../images/love.png'></image>
+ </button>
+  <button class='btn2' bindtap="hateit">
+ <image class='btnImg' src='../images/hate.png' ></image>
+ </button>
+ <block wx:if="{{donghua}}">
+  <view class='donghua'>
+    <image bindtap='hua'class="imagehua" style='left:{{left1}}px' animation="{{animationData1}}" class='love' src='../images/sweetheart.png'></image>
+    <image bindtap='hua'class="imagehua" style='left:{{left2}}px' animation="{{animationData2}}" class='love' src='../images/sweetheart.png'></image>
+    <image bindtap='hua'class="imagehua" style='left:{{left3}}px' animation="{{animationData3}}" class='love' src='../images/sweetheart.png'></image>
+    <image bindtap='hua'class="imagehua" style='left:{{left4}}px' animation="{{animationData4}}" class='love' src='../images/sweetheart.png'></image>
+    <image bindtap='hua'class="imagehua" style='left:{{left5}}px' animation="{{animationData5}}" class='love' src='../images/sweetheart.png'></image>
+    <image bindtap='hua'class="imagehua" style='left:{{left6}}px' animation="{{animationData6}}" class='love' src='../images/sweetheart.png'></image>
+    </view>
+  </block>
+<block wx:if="{{donghua1}}">
+  <view class='donghua1'>
+    <image bindtap='hua'class="imagehua" style='left:{{left7}}px' animation="{{animationData7}}" class='star' src='../images/heartbreak.png'></image>
+    <image bindtap='hua'class="imagehua" style='left:{{left8}}px' animation="{{animationData8}}" class='star' src='../images/heartbreak.png'></image>
+    <image bindtap='hua'class="imagehua" style='left:{{left9}}px' animation="{{animationData9}}" class='star' src='../images/heartbreak.png'></image>
+    <image bindtap='hua'class="imagehua" style='left:{{left10}}px' animation="{{animationData10}}" class='star' src='../images/heartbreak.png'></image>
+    <image bindtap='hua'class="imagehua" style='left:{{left11}}px' animation="{{animationData11}}" class='star' src='../images/heartbreak.png'></image>
+    <image bindtap='hua'class="imagehua" style='left:{{left12}}px' animation="{{animationData12}}" class='star' src='../images/heartbreak.png'></image>
+    </view>
+  </block>

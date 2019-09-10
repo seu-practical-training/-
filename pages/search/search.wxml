@@ -1,0 +1,53 @@
+<!--pages/search/search.wxml-->
+<!-- 搜索页面 -->
+<!-- 作者：唐余鑫，郑雅璐 -->
+<view class="main">
+  <view class="search-box">
+     <!-- 搜索栏 -->
+    <input class="search-input" placeholder="搜索" value="{{value}}" bindinput="searchInput" bindconfirm="confirmSearch" />
+    <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
+    <text class="search-btn" wx:if="{{showButton}}" bindtap="confirmSearch">确定</text>
+    <text class="search-btn" wx:if="{{showButton}}" bindtap="cancelSearch">取消</text>
+  </view>
+
+  <!-- 显示搜索结果 -->
+  <view class="result" wx:if="{{showResult}}">
+    <view class="result-box" wx:if="{{result.length > 0}}">
+      <view class="result-list" wx:for="{{result}}" wx:key="index">
+        <navigator url="../goods_details/goods_details?temp={{item.goods_id}}">
+          <image mode='aspectFill' src="{{item.thumb}}"></image>
+          <view class="result-text">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="result-text">
+            <text>￥ {{item.price}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view class="result-null" wx:else>
+      <view class="null-tips">搜索结果为空！</view>
+    </view>
+  </view>
+
+  <!--分类导航栏-->
+  <view class="classify">
+    <scroll-view class='left-navbar' scroll-y="true">
+      <view wx:for="{{goods_directory}}" class="{{ currentTab == item.brand_id ? 'active' : '' }}" wx:key="unique" bindtap="{{ currentTab != item.brand_id ? 'navbarTap':'' }}" id="{{item.brand_id}}" data-screenId="{{item.brand_id}}">{{item.brand_name}}
+      </view>
+    </scroll-view>
+    <scroll-view id="right" scroll-y="true" scroll-top="{{scrollTop}}">
+      <!--商品展示-->
+      <view class="goods-list" wx:for="{{1}}" wx:key="unique">
+        <view class="goods-title">{{goods_directory[screenId].brand_name}}</view>
+        <view wx:for="{{goods_directory[screenId].children}}" class="goods" wx:for-item="cell" wx:key="unique" id="{{item.brand_id}}">
+          <navigator url="../goods_details/goods_details?temp={{cell.idtext}}">
+            <image class="img" src="{{cell.navimg}}"></image>
+            <text>{{cell.nametext}}</text>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>

@@ -1,0 +1,56 @@
+.container {
+  background-size:100% 100%;
+  height:620px;
+  background-repeat:no-repeat;
+  background-image:url('https://tva1.sinaimg.cn/large/006y8mN6ly1g6onm69lzxj30u01hc1kx.jpg');
+
+}
+
+.infoBar {
+  display: flex;
+  background: rgb(68,96,114);
+  font-size: 28rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.second {
+  color: red;
+}
+
+.section {
+  display: flex;
+  margin: 18rpx;
+  padding: 18rpx;
+  position: relative;
+  flex-direction: row;
+}
+
+button {
+  margin: 16rpx;
+  color: grey;
+  background-color: rgb(247, 105, 104);
+  border-radius: 20rpx;
+}
+
+.send {
+  font-size: 12;
+  right: 0;
+  position: absolute;
+}
+
+.remark {
+  font-size: 24rpx;
+  padding: 18rpx;
+  color:white;
+}
+
+.correct {
+  width: 50rpx;
+  position: absolute;
+  right: 0;
+}
+
+.phcolor{
+  color:white;
+}

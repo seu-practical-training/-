@@ -1,0 +1,49 @@
+/* pages/toplist/toplist.wxss */
+
+/* .background {
+  width: 20px;
+  height: 20px;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+} */
+/* .navigator-hover {
+  background: none;
+} */
+.bd{
+  height:250px;
+  width:100%
+}
+
+.cart-box{
+background:rgb(255, 249, 223);
+margin:0px 0px;
+}
+.cart-list{
+    position: relative;
+    padding: 20rpx 20rpx 20rpx 285rpx;
+    height: 185rpx;
+    border-bottom: 1rpx solid rgb(123,1,0);
+}
+.cart-list .cart-thumb{
+    position: absolute;
+    top: 20rpx;
+    left: 25rpx;
+    width: 200rpx;
+    height:200rpx;
+    }
+.cart-list .cart-pro-name{
+    display: inline-block;
+    width: 300rpx;
+    height: 105rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+    color:rgb(123,1,0);
+}
+.cart-list .cart-pro-price{
+    display: inline-block;
+    float: right;
+    height: 105rpx;
+    line-height: 50rpx;
+    color:rgb(123,1,0);
+}
