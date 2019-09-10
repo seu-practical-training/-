@@ -1,0 +1,14 @@
+<view class="container">
+
+  <view class="infoBar">
+    <text class="first">1.验证人脸 ><text class="second">2.设置新信息</text> </text>
+  </view>
+
+  <camera
+  device-position="front"
+  flash="off"
+  binderror="error"
+  style="width: 90%; height: 100vh; border-radius: 30px; margin-left:20px; margin-right:20px;"
+  ></camera>
+
+</view>

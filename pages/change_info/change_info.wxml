@@ -1,0 +1,41 @@
+<view class="container">
+
+  <view class="infoBar">
+    <text class="first">1.验证人脸信息 ><text class="second">2.设置新信息</text> </text>
+  </view>
+
+
+
+  <view class="section">
+    <input placeholder="请输入用户姓名" type="text" maxlength="11" bindinput="inputName" auto-focus />
+  </view>
+  <view class="section">
+    <input placeholder="请输入手机号码" type="number" maxlength="11" bindinput="inputPhoneNum" auto-focus />
+  </view>
+  <view class="send" bindtap="sendMsg">
+    <text wx:if="{{send}}">发送</text>
+    <text wx:if="{{alreadySend}}">{{second+"s"}}</text>
+  </view>
+
+
+  <!-- <view class="section">
+    <input placeholder="请输入短信验证码" type="number" bindinput="addCode" />
+  </view> -->
+
+  <view class="section">
+    <input password='true' placeholder="输入新密码" type="number" maxlength="32" minlength="8" bindinput="inputPassword" auto-focus="true" />
+  </view>
+
+  <view class="section">
+    <input password='true' placeholder="确认新密码" type="number" bindinput="checkPassword" auto-focus="true" />
+    <image wx:if="{{correct}}" class="correct" mode='widthFix' src="  ../images/check-circle.png" bindtap="correct"></image>
+  </view>
+
+  <view class="remark">
+    <text>密码长度8-32位</text>
+  </view>
+
+  <button disabled="{{disabled}}" bindtap="navigate">确认提交</button>
+
+
+</view>

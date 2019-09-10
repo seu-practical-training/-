@@ -1,0 +1,26 @@
+.container{
+  width: 100vm;
+  height:100vh;
+  background-repeat:no-repeat;
+  background-image:url('https://tva1.sinaimg.cn/large/006y8mN6ly1g6onm69lzxj30u01hc1kx.jpg');
+}
+
+
+.infoBar{
+   display: flex;
+   background:white;
+   font-size:28rpx;
+   align-items:center;
+   justify-content: center;
+ }
+
+.first{
+   color:red;
+ }
+
+  button{
+   margin-top:10rpx;
+   color:grey;
+   background-color: rgb(247,105,104);
+   border-radius:20rpx;
+ }

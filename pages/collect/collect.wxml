@@ -1,0 +1,14 @@
+<view class="container">
+  <!-- 信息导航栏 -->
+  <view class="infoBar">
+    <text class="first">1.输入手机号 > 2.人脸信息采集</text>
+  </view>
+
+  <!-- 照相机 -->
+  <camera
+  device-position="front"
+  flash="off"
+  binderror="error"
+  style="width: 90%; height: 100vh; border-radius: 30px; margin-left:20px; margin-right:20px;"
+  ></camera>
+</view>
