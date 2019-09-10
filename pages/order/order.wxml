@@ -1,0 +1,50 @@
+<view class="main">
+  <!-- 订单页面商品详情 -->
+  <view class="orders-box">
+    <view wx:for="{{orders}}" wx:key="index" class="orders-list">
+      <image class="orders-thumb" src="{{item.image}}"></image>
+      <view class="orders-pro-name">{{item.title}}</view>
+      <view class="orders-pro-price">￥{{item.price}}</view>
+      <view class="orders-count-num">×{{item.num}}</view>
+    </view>
+  </view>
+
+  <!-- 付款合计 -->
+  <view class="orders-footer">
+    <view class="orders-footer-total">付款合计：￥{{total}}</view>
+    <view class="orders-footer-btn" bindtap="showModel">去付款</view>
+  </view>
+
+  <!-- 渐深的背景层 -->
+  <view class='{{bg}}' style="visibility:{{backgroundVisible ? 'visible':'hidden'}}"></view>
+  <!-- 底部弹出层 -->
+  <view class="element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}">
+    <view class="element">
+      <view class='picker_header'>
+        <text class="left-bt" catchtap="hidden">取消</text>
+        <text class="right-bt" catchtap="return">我再想想</text>
+      </view>
+
+      <view class="money">
+        <text class="money_span">¥{{total}}</text>
+      </view>
+
+      <view class="payInfo">
+        <view class="tab">
+          <view class="section">
+            <text class="account">推好物账号:</text>
+            <text class="number">{{phone}}</text>
+          </view>
+          <view class="person-line"></view>
+        </view>
+      </view>
+
+      <view class='add_btn' style="position:fixed; bottom:0;">
+        <button class='btn' bindtap="paynow">
+          立即付款
+        </button>
+      </view>
+    </view>
+  </view>
+
+</view>

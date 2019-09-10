@@ -1,0 +1,110 @@
+form{
+  width: 310px;
+  height: 240px;
+  line-height: 40px;
+  /* border: 1px solid red;  */
+}
+
+.icon{
+  width: 230rpx;
+  height: 230rpx;
+
+}
+
+.info1{
+  display:flex; 
+  height:100rpx;  
+}
+
+.info2{
+  display:flex; 
+  height:100rpx;  
+}
+
+input{
+  display: flex;
+  margin:20rpx;
+  padding:20rpx;
+}
+
+.btn1{
+  width: 90%;
+  margin-top: 30rpx;
+  background-color: rgb(247,105,104);
+  color: #FFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 98rpx; 
+}
+.btn1::after {
+  border: 0;
+}
+.btn1_hover {
+  background-color: rgb(247,105,104);
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.btn2{
+  width: 90%;
+  margin-top: 30rpx;
+  background-color: rgb(247,105,104);
+  color: #FFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 98rpx; 
+}
+.btn2::after {
+  border: 0;
+}
+.btn2_hover {
+  background-color: rgb(247,105,104);
+}
+
+.btn3{
+  width: 90%;
+  margin-top: 30rpx;
+  background-color: rgb(247,105,104);
+  color: #FFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 98rpx; 
+}
+.btn3::after {
+  border: 0;
+}
+.btn3_hover {
+  background-color: rgb(247,105,104);
+}
+
+.title text{
+  font-size: 25px;
+  color: #666;
+
+}
+
+form text{
+font-size: 20px;
+color: #666;
+}
+
+.container{
+  background-size:100% 100%;
+  height:100vh;
+  background-repeat:no-repeat;
+  background-image:url('https://tva1.sinaimg.cn/large/006y8mN6ly1g6omtw31vxj30u01hc7wh.jpg');
+  }
+
+  .phcolor{
+    color:white;
+  } 

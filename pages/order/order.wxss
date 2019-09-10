@@ -1,0 +1,226 @@
+.main{
+  background-size:100% 100%;
+  height:100vh;
+  background-repeat:no-repeat;
+  background-image:url('https://tva1.sinaimg.cn/large/006y8mN6ly1g6orajy7dtj30u01hcu0x.jpg');
+}
+
+.orders-address{
+    position: relative;
+    padding: 20rpx 50rpx 20rpx 35rpx;
+    font-size: 14px;
+    line-height: 25px;
+    border-bottom: 20rpx solid #ededed;
+    color: #adadad;
+}
+.orders-address::after{
+    position: absolute;
+    right: 30rpx;
+    top: 60rpx;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 4rpx solid #7f7f7f;
+    border-right: 4rpx solid #7f7f7f;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.orders-address-name{
+    display: inline-block;
+    width: 300rpx;
+}
+
+.orders-no-address{
+    position: relative;
+    height: 90rpx;
+    line-height: 90rpx;
+    color: #adadad;
+    border-bottom: 20rpx solid #ededed;
+    text-align: center;
+}
+.orders-no-address::after{
+    position: absolute;
+    right: 30rpx;
+    top: 34rpx;
+    content: '';
+    width: 16rpx;
+    height: 16rpx;
+    border-top: 4rpx solid #7f7f7f;
+    border-right: 4rpx solid #7f7f7f;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.orders-box{
+    padding-bottom: 105rpx;
+}
+.orders-list{
+    position: relative;
+    padding:20rpx 20rpx 20rpx 220rpx;
+    height: 180rpx;
+    border-bottom: 1rpx solid #ededed;
+}
+.orders-thumb{
+    position: absolute;
+    top: 20rpx;
+    left: 20rpx;
+    width: 180rpx;
+    height: 180rpx;
+}
+.orders-list view{
+    line-height: 60rpx;
+}
+
+.orders-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 95rpx;
+    line-height: 95rpx;
+    border-top: 1rpx solid #ededed;
+}
+.orders-footer .orders-footer-total{
+    display: inline-block;
+    width: 510rpx;
+    padding-left: 30rpx;
+    box-sizing: border-box;
+    color: #f5150d;
+}
+.orders-footer .orders-footer-btn{
+    display: inline-block;
+    width: 240rpx;
+    text-align: center;
+    color: #fff;
+    background: rgb(233, 9, 20);
+}
+
+.person-line {
+  width: 100%;
+  height: 2rpx;
+  background:	#F5F5F5;
+  margin-left: 0rpx;
+}
+
+.money_span{
+  margin-top: 100rpx;
+  font-size:50rpx;
+  margin-bottom: 20rpx;
+  justify-content: center;
+  display:flex;
+}
+
+.account{
+  color: gray;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+
+.payInfo{
+  margin-top: 100rpx;
+}
+
+.tab{
+  height:80rpx;
+}
+
+.section{
+  display: flex;
+  flex-direction: row;
+}
+
+.account{
+   flex: 1; 
+   align-items:center;
+}
+
+.number{
+  position: relative;
+  align-items:center;
+  padding-right: 10rpx;
+}
+
+.add_btn{
+    width: 100%;
+    bottom: 30rpx;
+}
+
+.btn{
+    width: 450rpx;
+    background: #14a1fd;
+    color: #fff;
+    border-radius: 70rpx;
+}
+
+.element-wrapper {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
+.bg {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  transition-property: background-color;
+  transition-timing-function: ease;
+  transition-duration: 1s;
+  transition-delay: 0;
+}
+
+.element {
+  position: fixed;
+  width: 100%;
+  height: 50vh;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.picker_header text {
+  color: #999;
+  display: inline-flex;
+  position: fixed;
+  margin-top: 20rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 34rpx;
+}
+
+.element .left-bt {
+  left: 5%;
+  font-size: 34rpx;
+  color: #888;
+  line-height: 34rpx;
+}
+
+.element .right-bt {
+  right: 5%;
+  font-size: 34rpx;
+  color: #888;
+  text-align: right;
+  line-height: 34rpx;
+}
+
+.element .line {
+  display: block;
+  position: fixed;
+  height: 1px;
+  width: 100%;
+  margin-top: 89rpx;
+  background-color: #eee;
+}

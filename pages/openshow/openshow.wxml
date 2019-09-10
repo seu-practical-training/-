@@ -1,0 +1,13 @@
+<view class="content" bindtap="click">
+<image class='background' src="../images/background2.jpg" mode="aspectFill"></image>
+	<!--pics文件夹下的background.jpg文件-->
+	<view class="container">
+  <view class="userflash" animation="{{ani2}}">
+    <image src="../images/ydd1.png"  mode='aspectFill'></image>
+  </view>
+    <view class="userflash1" animation="{{ani1}}">
+    <image src="../images/ydd2.png"  mode='aspectFill'></image>
+  </view>
+</view>
+</view>
+

@@ -1,0 +1,19 @@
+<view class="orders-box">
+  <view class="orders">我的订单</view>
+  <view class="orders-list" wx:for="{{list}}" wx:key="index">
+    <view class="orders-number">订单编号：{{item.number}}</view>
+    <view class="orders-time">订单时间：{{item.time}}</view>
+    <view class="orders-detail" wx:for="{{item.product_list}}" wx:for-item="cell" wx:for-index="cellindex">
+      <image src="{{cell.thumb}}"></image>
+      <view class="">{{cell.name}}</view>
+      <view class="">{{cell.count}}</view>
+      <text class="orders-money">￥{{cell.money}}</text>
+    </view>
+    <view class="orders-status">订单状态：{{item.status}}</view>
+    <view class="orders-total">付款金额：{{item.total}}</view>
+    <view class="orders-footer">
+      <button size="mini" class="left" bindtap="payOrders">付款</button>
+      <button size="mini" class="orders-btn" bindtap="deleteOrders">删除</button>
+    </view>
+  </view>
+</view>

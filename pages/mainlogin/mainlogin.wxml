@@ -1,0 +1,36 @@
+<!--pages/mianlogin/mainlogin.wxml-->
+<!-- 登陆页面 -->
+<!-- 作者：郑雅璐 -->
+<view class='container'>
+<form bindsubmit="onSubmit">
+
+<!-- 输入手机号栏 -->
+<view class="info1">
+<input placeholder-class="phcolor" placeholder='请输入手机号' name="account" bindinput="phoneInput"/>
+</view>
+
+<!-- 输入密码栏 -->
+<view class="info2">
+<input  placeholder-class="phcolor" password='true' placeholder='请输入密码' name="pwd" bindinput="passwordInput"/>
+</view>
+
+<view class='button'>
+<!-- 选择登陆方式 -->
+<button class='btn1'  hover-class='btn1_hover' bindtap="login" loading="{{loading}}">
+<image class='btnImg' src='../images/humanPicture.png'></image>
+<view>     登录</view>
+</button>
+
+<button class='btn2'   hover-class='btn2_hover' bindtap="scanninglogin" >
+<image class='btnImg' src='../images/scanning.png' ></image>
+<view> 扫脸登录</view>
+</button>
+
+<button class='btn3' hover-class='btn3-hover' bindtap="register">
+<image class='btnImg' src='../images/register.png' ></image>
+<view> 注册</view>
+</button>
+</view>
+
+</form>
+</view>
