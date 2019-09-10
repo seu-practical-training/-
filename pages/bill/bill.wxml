@@ -1,0 +1,33 @@
+<view class='mymain'>
+  <view class='qs'>
+      <view class='container_head'>
+        <view class='container_head_top'>
+          <view class='prev' bindtap="lasthalfyear">
+            <text >上一半年
+            </text>
+          </view>
+          <view class='top_title'>{{count[inde].name}}</view>
+          <view class='next' bindtap="nexthalfyear">
+            <text>下一半年</text>
+          </view>
+        </view>
+        <view class='container_head_main'>
+          <view>
+            <view class='main_Ttitle'>平均月消费</view>
+            <view class='main_main'>{{count[inde].ave}}</view>
+            <view class='main_mintitle'>元</view>
+          </view>
+          <view>
+            <view class='main_Ttitle'>最高支出月</view>
+            <view class='main_main'>{{count[inde].max}}</view>
+            <view class='main_mintitle'>月</view>
+          </view>
+        </view>
+      </view>
+      <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+    </view>
+  <view class='test' bindtap="alreadyonload">
+            <text >开始评估
+            </text>
+          </view>
+    </view>

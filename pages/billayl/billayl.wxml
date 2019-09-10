@@ -1,0 +1,31 @@
+<!--pages/billayl/billayl.wxml-->
+<view class='mymain'>
+  <view class='qs'>
+      <view class='container_head'>
+        <view class='container_head_top'>
+          <view class='prev' bindtap="lastmonth">
+            <text class='iconfont icon-iconfontzhizuobiaozhun023126' ></text>
+            <text >上个月</text>
+          </view>
+          <view class='top_title'>{{count[inde].name}}</view>
+          <view class='next' bindtap="nextmonth">
+            <text>下个月</text>
+            <text class='iconfont icon-jiantouyou'></text>
+          </view>
+        </view>
+        <view class='container_head_main'>
+          <view>
+            <view class='main_Ttitle'>本月总消费</view>
+            <view class='main_main'>{{count[inde].tot}}</view>
+            <view class='main_mintitle'>元</view>
+          </view>
+          <view>
+            <view class='main_Ttitle'>消费最高类</view>
+            <view class='main_main'>{{count[inde].max}}</view>
+            <view class='main_mintitle'>类</view>
+          </view>
+        </view>
+      </view>
+     <canvas canvas-id="pieCanvas" class="canvas" style="height:300px" bindtouchstart="touchHandler"></canvas>
+    </view>
+    </view>

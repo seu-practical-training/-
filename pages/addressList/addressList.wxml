@@ -1,0 +1,34 @@
+<scroll-view class="scroll" scroll-y="true">
+  <view wx:for="{{addressList}}" wx:key="{{index}}">
+    <view class="product-name-wrap">
+    <!-- 显示收货人姓名，电话 -->
+    <!-- 作者：郑雅璐 -->
+      <view class="ui-list-item-info">{{item.consignee}}
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text> {{item.mobile}}
+      </view>
+
+    <!-- 显示收货地址 -->
+    <!-- 作者：郑雅璐  -->
+      <view class="ui-list-item-address">
+        {{item.address}}
+      </view>
+
+    <!-- 显示收货时间 -->
+    <!-- 作者：郑雅璐  -->
+      <view class="ui-list-item-time">
+        <p>{{item.transportDay}}</p>
+        <p class="ui-list-item-del" data-index="{{index}}" bindtap="delAddress">删除</p>
+      </view>
+    
+    <!-- 分割线 -->
+    <!-- 作者：郑雅璐 -->
+      <view class="separate"></view>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 新增地址 -->
+<!-- 作者：郑雅璐  -->
+<view class="add-address" bindtap="addAddress">
+  <image class="add-img"  src="../images/add.png"></image>新增地址
+</view>

@@ -1,0 +1,43 @@
+<!--pages/autumn/autumn.wxml-->
+<!-- 广告页面顶部图片 -->
+<!-- 作者：郑雅璐 -->
+<view class='page_bd' style="background-image: url('https://tva1.sinaimg.cn/large/006y8mN6ly1g6oh8fsjpoj316o0nc1ky.jpg')">
+</view>
+<view class='page_bd2' style="background-image: url('https://tva1.sinaimg.cn/large/006y8mN6ly1g6ohbq4lxgj316i08qnah.jpg')">
+</view>
+
+<view class='section'>
+  <view class="welfare-container">
+  <!-- 广告页面标题 -->
+  <!-- 作者：郑雅璐 -->
+    <view class="category-title">
+      <text class="title">爆款推荐 送礼必囤</text>
+    </view>
+
+    <scroll-view scroll-y="true">
+    <!-- 广告页面广告 -->
+    <!-- 作者：郑雅璐 -->
+      <view class="welfares">
+        <block wx:for-items="{{goodsWelfareItems}}" wx:key="name">
+          <view class="welfares-good" catchtap="catchTapCategory" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+            <view>
+              <navigator url="../goods_details/goods_details?temp={{item.goodId}}">
+                <image src="{{item.imageurl}}" class="welfares-image" mode="widthFix" />
+              </navigator>
+            </view>
+            <view class="product-name">
+              {{item.name}}
+            </view>
+            <view class="product-price-wrap">
+              <p class="product-price-new">￥{{item.newprice}}</p>
+              <p class="product-price-old">￥{{item.oldprice}}</p>
+              <p class="discount">{{item.discount}}折</p>
+            </view>
+          </view>
+        </block>
+      </view>
+      
+    </scroll-view>
+  </view>
+
+</view>
