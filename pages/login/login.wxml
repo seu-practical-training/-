@@ -1,0 +1,9 @@
+<view class='bd'> 
+  <!-- 照相机 -->
+  <camera
+  device-position="front"
+  flash="off"
+  binderror="error"
+  style="width: 90%; height: 100vh; border-radius: 30px; margin-left:20px; margin-right:20px;"
+  ></camera>
+</view>

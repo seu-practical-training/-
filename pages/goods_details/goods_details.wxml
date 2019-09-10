@@ -1,0 +1,153 @@
+<view wx:for="{{list}}" wx:key="index">
+
+  <!--商品图片-->
+  <!-- 作者：郑雅璐，赵艺明，唐余鑫 -->
+  <view class='image'>
+  <image src="{{item.navimg}}" mode='aspectFit' style=" width:100%; margin-top:20px;"></image> 
+  </view>
+
+  <!-- 商品价格，分享按钮 -->
+  <!-- 作者：郑雅璐，赵艺明，唐余鑫， -->
+  <view class="info-price clear">
+    <view class='price'>￥{{item.pricetext}} </view>
+    <view class='fenxiang'>
+      <button class='fxbtn' open-type="share">
+        <view>分享</view>
+      </button>
+    </view>
+  </view>
+
+<!-- 商品名 -->
+  <view class="info-title">
+    <text>{{item.nametext}}</text>
+  </view>
+
+<!-- 商品库存销量 -->
+  <view style="solid #F6F6F6; background: #fff; padding:0 15px; line-height:5px;">
+    <view class="goodsInfo">
+      <text class="sub">库存：{{item.kucuntext}} </text>
+      <text class="sub"> 销量：{{item.xiaoliangtext}}</text>
+    </view>
+  </view>
+
+<!-- 商品详情 -->
+  <view class='details_box'>
+    <view style="height:40px;line-height: 40px;border-bottom:1px solid #f5f5f5;">
+      <view style="font-size:30rpx;">商品详情</view>
+    </view>
+    <view style='padding:10px 0px;'>
+      <view class="wxParse">
+        {{item.detailtext}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--底部浮动栏-->
+<view class="foot-nav mt15">
+  <view class="flex con gridXt tc">
+    <view class="fast-links mr15 flex f12">
+
+      <view class="container" bindtap='shoucang'>
+        <image src="{{shoucang}}" style="width:50rpx; height:50rpx "></image>
+        <text class="text">收藏</text>
+      </view>
+
+      <view class="container">
+        <image src="../images/kefu.png" style="width:50rpx; height:50rpx"></image>
+        <text class="text">客服</text>
+      </view>
+
+      <view class="container">
+        <image bindtap='gouwuche' src='../images/gouwuche.png' style="width:50rpx; height:50rpx"></image>
+        <text class="text">购物车</text>
+      </view>
+    </view>
+
+    <view class="add-cart sub f16">
+      <button class="add-cart-btn" bindtap="showModel">立即购买</button>
+    </view>
+  </view>
+
+  <!-- 渐深的背景层 -->
+  <view class='{{bg}}' style="visibility:{{backgroundVisible ? 'visible':'hidden'}}"></view>
+  <view class='mask-layer' wx:if="{{showPop}}" bindtap='hideModal'></view>
+  <view class='pop-add-cart pop-common' wx:if="{{showPop}}" animation='{{animationData}}'>
+    <!-- 头部区域，显示商品简略信息 -->
+    <view class='header row'>
+      <view wx:for="{{list}}" wx:key="index">
+        <view class='imagesize'>
+        <image class='headerimg' src="{{item.navimg}}" mode="aspectFit" style="width:50%; float:left; "></image>
+        </view>
+        <!-- <view class='headertext'> -->
+          <view class='pricetag'>￥{{item.pricetext}}    \n</view>
+          <view class='storage'>库存：{{item.kucuntext}}</view>
+        <!-- </view> -->
+      </view>
+    </view>
+    <!-- 中部区域，显示数量加减按钮 -->
+    <scroll-view class='body' scroll-y='true'>
+    <view class='numberchoose'>
+      <view class='left'>数量: </view>
+      <view class='right'>
+      <view class='stepper sum'>
+        <text class='{{minusStatus}}' type='number' bindtap='bindMinus'>-</text>
+        <input bindinput='bindManual' value='{{num}}'></input>
+        <text bindtap='bindPlus'>+</text>
+      </view>
+      </view>
+    </view>
+    </scroll-view>
+    <!-- 底部区域，显示加入购物车按钮 -->
+    <view class='footer toolbar'>
+      <view class="add_btn">
+        <button class="btn" bindtap='addtocar'>加入购物车</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 渐深的背景层 -->
+  <view class='{{bg}}' style="visibility:{{backgroundVisible ? 'visible':'hidden'}}"></view>
+  <!-- 底部弹出层 -->
+  <view class="element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}">
+    <view class="element">
+
+      <view class='picker_header'>
+        <text class="left-bt" catchtap="hidden">取消</text>
+        <text class="right-bt" catchtap="return">我再想想</text>
+      </view>
+
+      <view class="money">
+        <text class="money_span">¥{{total}}</text>
+      </view>
+
+      <view class="payInfo">
+        <view class="tab">
+          <view class="section">
+            <text class="account">支付宝账号:</text>
+            <text class="number">156******26</text>
+          </view>
+          <view class="person-line"></view>
+        </view>
+
+        <view class="tab">
+          <scroll-view class='body' scroll-y='true'>
+            <view class='stepper sum'>
+              <text class='{{minusStatus}}' type='number' bindtap='bindMinus'>-</text>
+              <input bindinput='bindManual' value='{{num}}'></input>
+              <text bindtap='bindPlus'>+</text>
+            </view>
+          </scroll-view>
+          <view class="person-line"></view>
+        </view>
+
+        <view class='add_btn2' style="position:fixed; bottom:50;">
+          <button class='btn2' bindtap="paynow">
+            立即付款
+          </button>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

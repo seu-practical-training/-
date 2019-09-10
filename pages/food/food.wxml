@@ -1,0 +1,39 @@
+<!--pages/food/food.wxml-->
+<!-- 广告页面顶部图片 -->
+<!-- 作者：郑雅璐 -->
+<view class='title' style="background-image: url('https://tva1.sinaimg.cn/large/006y8mN6ly1g6omj0626kj311a0rwx6p.jpg')">
+</view>
+<view class='page_bd2' style="background-image: url('https://tva1.sinaimg.cn/large/006y8mN6ly1g6omjicahjj3114054abu.jpg')">
+</view>
+
+<view class='commodity'>
+  <!--福利专场-->
+  <!-- 作者：郑雅璐 -->
+  <view class="welfare-container">
+    <scroll-view scroll-y="true">
+      <view class="welfares">
+        <block wx:for-items="{{goodsWelfareItems}}" wx:key="name">
+          <view class="welfares-good" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+            <view>
+              <navigator url="../goods_details/goods_details?temp={{item.goodId}}">
+                <image src="{{item.imageurl}}" class="welfares-image" mode="aspectFill" />
+              </navigator>
+            </view>
+            <view class="product-name">
+              {{item.name}}
+            </view>
+            <view class="product-price-wrap">
+              <p class="product-price-new">￥{{item.newprice}}</p>
+              <p class="product-price-old">￥{{item.oldprice}}</p>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view>
+        <text class="end"> 
+        ---------------返回顶部---------------
+          </text>
+      </view>
+    </scroll-view>
+  </view>
+</view>
